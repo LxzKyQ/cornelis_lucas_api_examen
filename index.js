@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async() => {
 });
 async function load_data() {
     const contentElement = document.getElementById("cards");
-    const request = await fetch("/Serveur/list.php");
+    const request = await fetch("Serveur/list.php");
     const champions = await request.json();
     contentElement.innerHTML = "";
     for (const champion of champions) {
@@ -75,7 +75,7 @@ async function load_data() {
 
 async function supp_champion(id) {
     const champion = { "id": id };
-    await fetch("/Serveur/delete.php", {
+    await fetch("Serveur/delete.php", {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ async function edit(id) {
 
     };
     if (selecteur !== "") {
-        champion["img"] = `/Client/image/${selecteur}.png`
+        champion["img"] = `image/${selecteur}.png`
     }
     if (nom !== "") {
         champion["name"] = nom
@@ -112,7 +112,7 @@ async function edit(id) {
         champion["arme"] = arme
     }
 
-    await fetch("/Serveur/edit.php", {
+    await fetch("Serveur/edit.php", {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
@@ -132,12 +132,12 @@ async function send_champion() {
     const champion = {
         "name": nom,
         "vie": vie,
-        "img": `/Client/image/${selecteur}.png`,
+        "img": `image/${selecteur}.png`,
         "phase": phase,
         "arme": arme
     };
     // envoi du champion en POST
-    await fetch("/Serveur/add.php", {
+    await fetch("Serveur/add.php", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
