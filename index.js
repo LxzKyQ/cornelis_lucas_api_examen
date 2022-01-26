@@ -23,7 +23,7 @@ async function load_data() {
 		    <div class="content1">
             <label class="custom-select2" for="champion_input_popup">
             <select id="champion_input_popup" >
-            <option value="Maverick">
+            <option value="">
                 Champion
             </option>
             <option value="Maverick">Maverick</option>
@@ -37,12 +37,12 @@ async function load_data() {
         <label for="name" class="form__label2">Nom</label>
     </div>
     <div class="form__group2 field">
-        <input type="number" class="form__field2" placeholder="Vie" name="Vie" id='vie_input_popup' required />
-        <label for="name" class="form__label2">Vie</label>
+        <input  type="number" class="form__field2" placeholder="Vie" name="Vie" id='vie_input_popup' required />
+        <label for="Vie" class="form__label2">Vie</label>
     </div>
     <label class="custom-select2" for="phase_input_popup">
         <select id="phase_input_popup" >
-        <option value="Attaque">
+        <option value="">
             Quelle Phase ?
         </option>
         <option value="Attaque">Attaque</option>
@@ -51,7 +51,7 @@ async function load_data() {
     </label>
     <label class="custom-select2" for="arme_input_popup">
         <select id="arme_input_popup" >
-        <option value="m4">
+        <option value="">
         Arme
         </option>
         <option value="m4">m4</option>
@@ -88,27 +88,26 @@ async function supp_champion(id) {
 async function edit(id) {
     const selecteur = document.getElementById("champion_input_popup").value;
     const nom = document.getElementById("name_input_popup").value;
-    console.log(typeof nom);
-    const vie = parseInt(document.getElementById("vie_input_popup").value);
+    const vie = document.getElementById("vie_input_popup").value;
     const phase = document.getElementById("phase_input_popup").value;
     const arme = document.getElementById("arme_input_popup").value;
     let champion = {
         "id": id
 
     };
-    if (selecteur !== "") {
+    if (selecteur !=="") {
         champion["img"] = `image/${selecteur}.png`
     }
-    if (nom !== "") {
+    if (nom !=="") {
         champion["name"] = nom
     }
-    if (vie !== "") {
+    if (vie !=="") {
         champion["vie"] = vie
     }
-    if (phase !== "") {
+    if (phase !=="") {
         champion["phase"] = phase
     }
-    if (phase !== "") {
+    if (arme !=="") {
         champion["arme"] = arme
     }
 
