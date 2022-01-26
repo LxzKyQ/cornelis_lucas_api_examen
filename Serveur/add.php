@@ -1,5 +1,5 @@
 <?php
-// ! = =
+// ! = on vérifie si on utlise le bon protocole pour la requete
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
     exit;
@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $inputJSON = file_get_contents('php://input'); // récupération du corps de la requete HTTP
 $champion = json_decode($inputJSON, TRUE);
 // Vérifier la validité du champion et l'ajouter:
-// En BDD -> C'est ce qu'il faut faire dans un vrai projet
 // === Dans un fichier ===
 $file_name = "data.json";
 $champions = [];

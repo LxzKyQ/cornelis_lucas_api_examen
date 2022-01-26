@@ -11,9 +11,12 @@
 </head>
 
 <body>
+    <!-- title -->
     <div class="title"><img src="/image/title.png"></div>
     <div id="erreur"></div>
+    <!-- formulaire -->
     <div class="center">
+        <!-- premier selecteur -->
         <label class="custom-select" for="Champion_input">
             <select id="Champion_input" required >
             <option value="Maverick">
@@ -25,14 +28,17 @@
             <option value="Maestro">Maestro</option>
             </select>
         </label>
+        <!-- deuxième champs -->
         <div class="form__group field">
             <input type="input" class="form__field" placeholder="Nom" name="Nom" id='name_input' required />
             <label for="name" class="form__label">Nom</label>
         </div>
+        <!-- troisième champs -->
         <div class="form__group field">
             <input type="number" class="form__field" placeholder="Vie" name="Vie" id='vie_input' required />
             <label for="Vie" class="form__label">Vie</label>
         </div>
+        <!-- quatrième champs (selecteur) -->
         <label class="custom-select" for="phase_input">
             <select id="phase_input" required >
             <option value="Attaque">
@@ -42,6 +48,7 @@
             <option value="Defense">Defense</option>
             </select>
         </label>
+        <!-- cinquième champs (selecteur) -->
         <label class="custom-select" for="arme_input">
             <select id="arme_input" required >
             <option value="">
@@ -52,8 +59,10 @@
             <option value="mpx">mpx</option>
             </select>
         </label>
+        <!-- boutton ajouter -->
         <button class="btn2" onclick="send_champion()">Add</button>
     </div>
+    <!-- div pour le contenu js -->
     <div class="main">
         <ul class="cards" id="cards">
 

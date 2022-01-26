@@ -1,3 +1,5 @@
+/* base , image , body  */
+
 body {
     color: white;
     background-image: url("/image/background.png");
@@ -27,7 +29,7 @@ img {
 }
 
 
-/* btn dans form */
+/* bouton du formulaire */
 
 .btn {
     color: #ffffff;
@@ -52,7 +54,7 @@ img {
 }
 
 
-/* btn sur card */
+/* bouton sur les cards*/
 
 .btn2 {
     color: #ffffff;
@@ -76,7 +78,7 @@ img {
 }
 
 
-/* btn dans popup */
+/* bouton dans la popup */
 
 .btn3 {
     color: #98222D;
