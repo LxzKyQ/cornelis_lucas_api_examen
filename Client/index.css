@@ -1,0 +1,481 @@
+body {
+    color: white;
+    background-image: url("/Client/image/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* card personnages */
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+/* btn dans form */
+
+.btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* btn sur card */
+
+.btn2 {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-top: 20px;
+    display: block;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* btn dans popup */
+
+.btn3 {
+    color: #98222D;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn3:hover {
+    background-color: rgba(255, 0, 0, 0.12);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .cards_item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 56rem) {
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #98222D 40%, #FA9CA6 100%);
+}
+
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.made_by {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+/* title */
+
+.title {
+    display: flex;
+    justify-content: center
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* form input */
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100PX;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom left, #98222D 40%, #FA9CA6 100%);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #98222D;
+    font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+
+/* form select */
+
+.custom-select {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    min-width: 180px;
+    border: 1px solid #FA9CA6;
+    background-color: #ffffffb3;
+    z-index: 10;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20%;
+}
+
+.custom-select select {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 12px 0px 15px 15px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.custom-select:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    line-height: 38px;
+    content: "∨";
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    border-left: 1px solid #000000;
+    z-index: -1;
+}
+
+
+/* pop up */
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #98222D;
+}
+
+.popup .content1 {
+    max-height: 50%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+    .popup {
+        width: 70%;
+    }
+}
+
+
+/* form select popup */
+
+.custom-select2 {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    min-width: 180px;
+    border: 1px solid #FA9CA6;
+    background-color: #ffffffb3;
+    z-index: 10;
+    border-radius: 20%;
+    margin-bottom: 5px;
+}
+
+.custom-select2 select {
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 12px 0px 15px 15px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.custom-select2:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    line-height: 38px;
+    content: "∨";
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    border-left: 1px solid #000000;
+    z-index: -1;
+}
+
+
+/* form input popup */
+
+.form__group2 {
+    position: relative;
+    padding: 15px 0 0;
+    width: 100PX;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.form__field2 {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #98222D;
+    outline: 0;
+    font-size: 1.3rem;
+    color: linear-gradient(to bottom left, #98222D 40%, #FA9CA6 100%);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field2::placeholder {
+    color: transparent;
+}
+
+.form__field2:placeholder-shown~.form__label2 {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label2 {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #98222D;
+}
+
+.form__field2:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to bottom left, #98222D 40%, #FA9CA6 100%);
+    border-image-slice: 1;
+}
+
+.form__field2:focus~.form__label2 {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #98222D;
+    font-weight: 700;
+}
+
+.form__field2:required,
+.form__field2:invalid {
+    box-shadow: none;
+}

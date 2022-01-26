@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Client/index.css">
+    <script src="/Client/index.js"></script>
+    <link rel="icon" href="/Client/image/title.png" />
+    <title>Rainbow Six Siege - Les personnages</title>
+</head>
+
+<body>
+    <div class="title"><img src="/Client/image/title.png"></div>
+    <div class="center">
+        <label class="custom-select" for="Champion_input">
+            <select id="Champion_input" required >
+            <option value="Maverick">
+                Champion
+            </option>
+            <option value="Maverick">Maverick</option>
+            <option value="Clash">Clash</option>
+            <option value="Alibi">Alibi</option>
+            <option value="Maestro">Maestro</option>
+            </select>
+        </label>
+        <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Nom" name="Nom" id='name_input' required />
+            <label for="name" class="form__label">Nom</label>
+        </div>
+        <div class="form__group field">
+            <input type="number" class="form__field" placeholder="Vie" name="Vie" id='vie_input' required />
+            <label for="Vie" class="form__label">Vie</label>
+        </div>
+        <label class="custom-select" for="phase_input">
+            <select id="phase_input" required >
+            <option value="Attaque">
+                Quelle Phase ?
+            </option>
+            <option value="Attaque">Attaque</option>
+            <option value="Defense">Defense</option>
+            </select>
+        </label>
+        <label class="custom-select" for="arme_input">
+            <select id="arme_input" required >
+            <option value="">
+            Arme
+            </option>
+            <option value="m4">m4</option>
+            <option value="mp5">mp5</option>
+            <option value="mpx">mpx</option>
+            </select>
+        </label>
+        <button class="btn2" onclick="send_champion()">Add</button>
+    </div>
+    <div class="main">
+        <ul class="cards" id="cards">
+
+        </ul>
+    </div>
+
+</body>
+
+</html>
