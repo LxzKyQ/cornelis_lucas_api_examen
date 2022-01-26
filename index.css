@@ -479,3 +479,22 @@ img {
 .form__field2:invalid {
     box-shadow: none;
 }
+
+div.erreur1 {
+    display: flex;
+    justify-content: center;
+    color: #FF0000;
+    margin-bottom: 50px;
+    font-size: 20px;
+    background-color: #ffffff9e;
+    padding: 20px;
+    width: 400px;
+    border-radius: 50px;
+    text-shadow: rgb(0 0 0) 2px 2px 3px;
+}
+
+.erreur2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

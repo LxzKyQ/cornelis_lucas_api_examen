@@ -95,19 +95,19 @@ async function edit(id) {
         "id": id
 
     };
-    if (selecteur !=="") {
+    if (selecteur !== "") {
         champion["img"] = `image/${selecteur}.png`
     }
-    if (nom !=="") {
+    if (nom !== "") {
         champion["name"] = nom
     }
-    if (vie !=="") {
+    if (vie !== "") {
         champion["vie"] = vie
     }
-    if (phase !=="") {
+    if (phase !== "") {
         champion["phase"] = phase
     }
-    if (arme !=="") {
+    if (arme !== "") {
         champion["arme"] = arme
     }
 
@@ -123,25 +123,31 @@ async function edit(id) {
 
 async function send_champion() {
     // Création du champion
+    const contentElement = document.getElementById("erreur");
     const selecteur = document.getElementById("Champion_input").value;
     const nom = document.getElementById("name_input").value;
     const vie = parseInt(document.getElementById("vie_input").value);
     const phase = document.getElementById("phase_input").value;
     const arme = document.getElementById("arme_input").value;
-    const champion = {
-        "name": nom,
-        "vie": vie,
-        "img": `image/${selecteur}.png`,
-        "phase": phase,
-        "arme": arme
-    };
-    // envoi du champion en POST
-    await fetch("Serveur/add.php", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(champion)
-    });
+    if (!selecteur || !nom || !vie || !phase || !arme) {
+        contentElement.innerHTML = `<div class="erreur2"><div class="erreur1">Remplir les champs sinon une balle!!!</div></div>`
+    } else {
+        const champion = {
+            "name": nom,
+            "vie": vie,
+            "img": `image/${selecteur}.png`,
+            "phase": phase,
+            "arme": arme
+        };
+        // envoi du champion en POST
+        await fetch("Serveur/add.php", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(champion)
+        });
+
+    }
     await load_data();
 }
